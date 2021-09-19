@@ -4,7 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the 
 import { faHeart,faTrashAlt } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 
 
-const Product = ({image ,title, color, size, quantity, price, discount, discountedPrice}) => {
+const Product = ({image ,title, color, size, quantity, price, discount, discountedPrice}: {
+    image: any;
+    title: any;
+    color: any;
+    size: any;
+    quantity: any;
+    price: any;
+    discount: any;
+    discountedPrice: any;
+  }) => {
     return (
         <div className={productStyles.product__container}>
             <div className={productStyles.product__imgContainer}>
