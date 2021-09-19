@@ -1,7 +1,12 @@
-import Image from "next/image";
+// import Image from "next/image";
 import productStyles from "../styles/Product.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
 import { faHeart, faTrashAlt } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
+import { Image } from "react-bootstrap";
+
+// const myLoader = ({ src, width, quality }: { src: any; width: any; quality: any }) => {
+//   return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
+// };
 
 const Product = ({
   image,

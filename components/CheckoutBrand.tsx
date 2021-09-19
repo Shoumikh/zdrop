@@ -2,10 +2,13 @@ import styles from "../styles/CheckoutBrand.module.scss";
 import Image from "next/image";
 import varifiedLogo from "../assets/varified.png";
 import Product from "./Product";
+import products from "../data/productsData";
 import p1 from "../assets/p1.png";
 import p2 from "../assets/p2.png";
+import { useEffect } from "react";
 
 const CheckoutBrand = ({
+  id,
   logo,
   name,
   fullfilledBy,
@@ -13,6 +16,7 @@ const CheckoutBrand = ({
   deliveryDate,
   additionalInfo,
 }: {
+  id: any;
   logo: any;
   name: any;
   fullfilledBy: any;
@@ -20,9 +24,15 @@ const CheckoutBrand = ({
   deliveryDate: any;
   additionalInfo: any;
 }) => {
+  // saving products dummy data to localStorage
+  useEffect(() => {
+    localStorage.setItem("dummyDataProducts", JSON.stringify(products));
+    return () => {};
+  }, []);
+
   return (
     <div className={styles.checkout__brandContainer}>
-      {/* brand and delivery info */}
+      {/* brand info */}
       <div className={styles.top}>
         <div className={styles.top__left}>
           <div className={styles.brand__container}>
@@ -40,6 +50,8 @@ const CheckoutBrand = ({
             </div>
           </div>
         </div>
+
+        {/* delevery info */}
         <div className={styles.top__right}>
           <span>Delivery Fee: BDT. {deliveryFee}</span>
           <span>Estimate Delivery on {deliveryDate}</span>
@@ -48,28 +60,26 @@ const CheckoutBrand = ({
 
       {/* product list */}
       <div className={styles.products}>
-        <Product 
-          image={p1} 
-          title="Men Striped Casual Spread Shirt Super Skinny Fit Low" 
-          color="Red" 
-          quantity="1"
-          price="3050" 
-          discount="25" 
-          size="XL" 
-          discountedPrice="2850" />
-
-        <Product
-          image={p2}
-          title="Men Striped Casual Spread Shirt Super Skinny Fit Low Men Striped Casual Spread Shirt Super Skinny Fit Low"
-          color="Red"
-          quantity="1"
-          price="3050"
-          discount="25"
-          size="XL"
-          discountedPrice="2850"
-        />
+        {products.map((product) =>
+          product.brand_id == id ? (
+            <Product
+              key={product.id}
+              title={product.title}
+              discountedPrice={product.discountedPrice}
+              quantity={product.quantity}
+              discount={product.discount}
+              size={product.size}
+              color={product.color}
+              price={product.price}
+              image={product.image}
+            />
+          ) : (
+            ""
+          )
+        )}
       </div>
 
+      {/* additional info */}
       <div className={styles.brand__additionalInfo}>
         <span>{additionalInfo}</span>
       </div>

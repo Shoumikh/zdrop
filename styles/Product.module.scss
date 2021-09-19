@@ -9,14 +9,14 @@ $zdrop-thinBorder: rgb(232, 232, 232);
   padding: 10px;
   border-bottom: 1px solid $zdrop-thinBorder;
 }
-
 .product__imgContainer {
   padding: 5px;
+  padding-right: 25px;
 }
 .product__img {
   object-fit: cover;
-  object-position: 0px 5px;
-  padding: 20px;
+  object-position: 0px 0px;
+  padding: 10px;
   border: 1px solid $zdrop-thinBorder;
 }
 
@@ -57,4 +57,3 @@ $zdrop-thinBorder: rgb(232, 232, 232);
 .product__priceContainer > span {
   padding-right: 20px;
 }
-
