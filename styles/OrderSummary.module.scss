@@ -1,0 +1,45 @@
+$zdrop-thinBorder: rgb(232, 232, 232);
+
+.order__container {
+  background: white;
+  min-width: 250px;
+  margin-left: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.order__titleContainer {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid $zdrop-thinBorder;
+}
+
+.order__info {
+  padding: 20px;
+  font-size: 13px;
+  color: gray;
+  border-bottom: 1px dashed lightgray;
+}
+
+.order__option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.order__coupon {
+  padding: 10px 25px;
+  border-bottom: 1px dashed lightgray;
+}
+
+.order__total {
+  padding: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .order__container {
+        margin-left: 0px;
+      }
+  }

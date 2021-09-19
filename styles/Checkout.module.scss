@@ -1,0 +1,67 @@
+// variables
+$zdrop-orange: #ff6f00;
+$zdrop-rootBackground: #fafafa;
+
+// styles
+.checkout__body {
+  padding: 0 20%;
+  font-size: 14px;
+  background: $zdrop-rootBackground;
+}
+
+.checkout__itemCount {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.checkout__itemCountLeft {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout__undoIcon {
+  padding-top: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.checkout__itemCountText > span {
+  font-size: 12px;
+}
+
+.checkout__addButton {
+  color: $zdrop-orange;
+  cursor: pointer;
+}
+
+.checkout__itemCountRight > span {
+  color: $zdrop-orange;
+  padding-left: 5px;
+}
+
+.checkout__container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1200px) {
+  .checkout__body {
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .checkout__body {
+    padding: 0 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .checkout__container {
+    display: flex;
+    flex-direction: column;
+  }
+}

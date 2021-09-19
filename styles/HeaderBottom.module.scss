@@ -1,0 +1,22 @@
+$zdrop-thinBorder: rgb(232, 232, 232);
+$zdrop-lightGrey: rgb(189, 189, 189);
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 12px;
+  color: $zdrop-lightGrey;
+  border-bottom: 1px solid $zdrop-thinBorder;
+  font-weight: 300;
+  background: #ffffff;
+}
+
+.header__option {
+  padding: 15px;
+  padding-right: 20px;
+}
+
+.header__option > span {
+  padding-left: 5px;
+}

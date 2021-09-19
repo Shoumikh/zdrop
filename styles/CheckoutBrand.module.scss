@@ -1,0 +1,72 @@
+$zdrop-thinBorder: rgb(232, 232, 232);
+
+.checkout__brandContainer {
+  border-radius: 5px;
+  border-bottom: 1px dashed lightgray;
+  margin-bottom: 20px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px;
+  border-bottom: 1px solid $zdrop-thinBorder;
+  border-radius: 5px;
+}
+
+.top__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.brand__logoContainer {
+  height: 50px;
+  width: 50px;
+  border-radius: 300px;
+  border: 1px solid gray;
+}
+
+.brand__logo {
+  border-radius: 300px;
+  border: 1px solid gray;
+}
+.brand__info {
+  padding-left: 10px;
+}
+
+.brand__titleContianer {
+  display: flex;
+  flex-direction: row;
+}
+
+.brand__validation {
+  padding-top: 2px;
+  padding-left: 2px;
+}
+
+.brand__titleFullfilled {
+  color: gray;
+}
+
+.top__right {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.brand__additionalInfo {
+  background: white;
+  border-bottom: 1px solid $zdrop-thinBorder;
+  padding: 10px;
+  font-size: 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 20px;
+}
